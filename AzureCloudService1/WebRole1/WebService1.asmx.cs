@@ -8,6 +8,7 @@ using Microsoft.WindowsAzure.Storage;
 using System.Configuration;
 using Microsoft.WindowsAzure.Storage.Table;
 using System.Text;
+using Microsoft.WindowsAzure.Storage.Queue;
 
 namespace WebRole1
 {
@@ -23,6 +24,7 @@ namespace WebRole1
     {
         private static NBAPlayerStats[] results;
         private static CloudTable table;
+        private static CloudQueue queue;
 
         [WebMethod]
         public NBAPlayerStats[] ReadCSV()
@@ -43,20 +45,19 @@ namespace WebRole1
         {
             CloudStorageAccount storageAccount = CloudStorageAccount.Parse(ConfigurationManager.AppSettings["StorageConnectionString"]);
             CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
-            table = tableClient.GetTableReference("nbaplayerstats");
+            CloudTable table = tableClient.GetTableReference("nbaplayerstats");
             table.CreateIfNotExists();
-
-            Console.WriteLine(results.Length);
+            
             foreach (NBAPlayerStats player in results)
             {
-                Console.WriteLine(player.Name + " | " + player.PPG);
                 TableOperation insertOperation = TableOperation.Insert(player);
                 table.Execute(insertOperation);
             }
+            WebService1.table = table;
         }
 
         [WebMethod]
-        public void ReadPlayerData()
+        public List<string> SearchPlayerData()
         {
             TableQuery<NBAPlayerStats> rangeQuery = new TableQuery<NBAPlayerStats>()
                 .Where(TableQuery.CombineFilters(
@@ -65,10 +66,32 @@ namespace WebRole1
                     TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.LessThan, "C"))
                 );
 
-            foreach (NBAPlayerStats entity in table.ExecuteQuery(rangeQuery))
+            List<string> matchedSearches = new List<string>();
+            foreach (NBAPlayerStats entity in WebService1.table.ExecuteQuery(rangeQuery))
             {
-                Console.WriteLine(entity.Name + " | " + entity.PPG);
+                matchedSearches.Add(entity.Name + " | " + entity.PPG);
             }
+
+            return matchedSearches;
+        }
+
+        [WebMethod]
+        public void InsertURL()
+        {
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(ConfigurationManager.AppSettings["StorageConnectionString"]);
+            CloudQueueClient queueClient = storageAccount.CreateCloudQueueClient();
+            queue = queueClient.GetQueueReference("myurls");
+            queue.CreateIfNotExists();
+
+            CloudQueueMessage message = new CloudQueueMessage("http://www.cnn.com/index.html");
+            queue.AddMessage(message);
+        }
+
+        [WebMethod]
+        public void ReadURLFromQueue()
+        {
+            CloudQueueMessage message2 = queue.GetMessage(TimeSpan.FromMinutes(5));
+            queue.DeleteMessage(message2);
         }
     }
 }

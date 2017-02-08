@@ -1,17 +1,11 @@
-DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 9:34:25 PM] At least one other instance of the launcher is running. Will wait until they all finish
-DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 9:34:25 PM] Service running in Emulator Mode, will not wait/kill other instances of the launcher
-DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 9:34:25 PM] Emulator config file set to C:\Users\iGuest\Desktop\feb08-344\AzureCloudService1\AzureCloudService1\csx\Debug\roles\WorkerRole1\approot\diagnostics.wadcfgx
-DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 9:34:25 PM] DiagnosticsStoreRootPath set to: C:\Users\iGuest\AppData\Local\dftmp\Resources\bb0f22b1-ef0b-4afd-a5ea-21190d59e9a0
-DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 9:34:25 PM] Loading config file: C:\Users\iGuest\Desktop\feb08-344\AzureCloudService1\AzureCloudService1\csx\Debug\roles\WorkerRole1\approot\diagnostics.wadcfgx
-DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 9:34:25 PM] Config file to read: C:\Users\iGuest\Desktop\feb08-344\AzureCloudService1\AzureCloudService1\csx\Debug\roles\WorkerRole1\approot\diagnostics.wadcfgx
-DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 9:34:25 PM] Checking VM Type
-DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 9:34:25 PM] Emulator config file set to C:\Users\iGuest\Desktop\feb08-344\AzureCloudService1\AzureCloudService1\csx\Debug\roles\WorkerRole1\approot\diagnostics.wadcfgx
-DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 9:34:25 PM] Extension set to Emulator Mode
-DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 9:34:25 PM] Reading XML configuration file
-DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 9:34:25 PM] Bypassing private config decryption
-DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 9:34:25 PM] Stopping the running plugin, if any
-DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 9:34:27 PM] No DiagnosticsPlugin is running.
-DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 9:34:27 PM] Killing any DiagnosticsPlugin that might remain.
-DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 9:34:28 PM] Killing any MonAgentHost that might remain.
-DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 9:34:28 PM] Diagnostics plugin stopped successfully
-DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 9:34:28 PM] Resetting DiagnosticPlugin
+DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 10:09:29 PM] Emulator config file set to C:\Users\iGuest\Desktop\feb08-344\AzureCloudService1\AzureCloudService1\csx\Debug\roles\WorkerRole1\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 10:09:29 PM] DiagnosticsStoreRootPath set to: C:\Users\iGuest\AppData\Local\dftmp\Resources\a72bb70c-8758-4eee-bde7-c2cb05d5f63b
+DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 10:09:29 PM] Loading config file: C:\Users\iGuest\Desktop\feb08-344\AzureCloudService1\AzureCloudService1\csx\Debug\roles\WorkerRole1\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 10:09:29 PM] Config file to read: C:\Users\iGuest\Desktop\feb08-344\AzureCloudService1\AzureCloudService1\csx\Debug\roles\WorkerRole1\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 10:09:29 PM] Checking VM Type
+DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 10:09:29 PM] Emulator config file set to C:\Users\iGuest\Desktop\feb08-344\AzureCloudService1\AzureCloudService1\csx\Debug\roles\WorkerRole1\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 10:09:29 PM] Extension set to Emulator Mode
+DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 10:09:29 PM] Reading XML configuration file
+DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 10:09:29 PM] Bypassing private config decryption
+DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 10:09:29 PM] Stopping the running plugin, if any
+DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 10:09:30 PM] Found a MonAgentHost.exe. WadArguments: "C:\Users\iGuest\Desktop\feb08-344\AzureCloudService1\AzureCloudService1\csx\Debug\roles\WebRole1\plugins\Diagnostics\Monitor\x64\MonAgentHost.exe" -LocalPath "C:\Users\iGuest\AppData\Local\dftmp\Resources\49c143c9-dc45-4bf2-a52d-495385f62142\WAD0105"  -ConfigFile "C:\Users\iGuest\AppData\Local\dftmp\Resources\49c143c9-dc45-4bf2-a52d-495385f62142\WAD0105\Configuration\MaConfig.xml" -ShutDownEvent WADDM-ShutDown-c7e666b0e9f540a6bee465a1530bf7c9  -TotalShutDownEvent WADDM-TotalShutDown-c7e666b0e9f540a6bee465a1530bf7c9 -InitializedEvent WADM-StartUp-c7e666b0e9f540a6bee465a1530bf7c9 -parent 10432 -events -wadVer1v5 -UseProxyServer -XStoreAccounts WadAccount#true#devstoreaccount1#Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==#http://127.0.0.1:10002#http://127.0.0.1:10001#http://127.0.0.1:10000.
