@@ -10,6 +10,8 @@ namespace WebRole1
     {
         public NBAPlayerStats(string name, string ppg)
         {
+            name = name.Substring(1, name.Length - 1);
+            ppg = ppg.Substring(0, ppg.Length - 2);
             this.PartitionKey = name;
             this.RowKey = Guid.NewGuid().ToString();
 
