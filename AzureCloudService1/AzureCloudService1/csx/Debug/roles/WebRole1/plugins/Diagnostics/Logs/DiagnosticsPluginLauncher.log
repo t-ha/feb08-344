@@ -1,0 +1,15 @@
+DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 8:32:10 PM] Emulator config file set to C:\Users\iGuest\Desktop\feb08-344\AzureCloudService1\AzureCloudService1\csx\Debug\roles\WebRole1\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 8:32:11 PM] DiagnosticsStoreRootPath set to: C:\Users\iGuest\AppData\Local\dftmp\Resources\084c156e-3037-4d8d-9137-6e714ee90f2a
+DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 8:32:11 PM] Loading config file: C:\Users\iGuest\Desktop\feb08-344\AzureCloudService1\AzureCloudService1\csx\Debug\roles\WebRole1\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 8:32:11 PM] Config file to read: C:\Users\iGuest\Desktop\feb08-344\AzureCloudService1\AzureCloudService1\csx\Debug\roles\WebRole1\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 8:32:11 PM] Checking VM Type
+DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 8:32:11 PM] Emulator config file set to C:\Users\iGuest\Desktop\feb08-344\AzureCloudService1\AzureCloudService1\csx\Debug\roles\WebRole1\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 8:32:11 PM] Extension set to Emulator Mode
+DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 8:32:11 PM] Reading XML configuration file
+DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 8:32:11 PM] Bypassing private config decryption
+DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 8:32:11 PM] Stopping the running plugin, if any
+DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 8:32:11 PM] No DiagnosticsPlugin is running.
+DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 8:32:11 PM] Killing any DiagnosticsPlugin that might remain.
+DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 8:32:11 PM] Killing any MonAgentHost that might remain.
+DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 8:32:11 PM] Diagnostics plugin stopped successfully
+DiagnosticsPluginLauncher.exe Information: 0 : [2/8/2017 8:32:11 PM] Resetting DiagnosticPlugin

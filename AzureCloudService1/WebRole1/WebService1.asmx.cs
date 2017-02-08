@@ -21,7 +21,7 @@ namespace WebRole1
     public class WebService1 : System.Web.Services.WebService
     {
         private static NBAPlayerStats[] nbaplayers;
-
+        private static CloudTable table;
 
         [WebMethod]
         public void ReadCSV()
@@ -47,6 +47,22 @@ namespace WebRole1
             {
                 TableOperation insertOperation = TableOperation.Insert(player);
                 table.Execute(insertOperation);
+            }
+        }
+
+        [WebMethod]
+        public void ReadPlayerData()
+        {
+            TableQuery<NBAPlayerStats> rangeQuery = new TableQuery<NBAPlayerStats>()
+                .Where(TableQuery.CombineFilters(
+                    TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.GreaterThan, "A"),
+                    TableOperators.And,
+                    TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.LessThan, "C"))
+                );
+
+            foreach (NBAPlayerStats entity in table.ExecuteQuery(rangeQuery))
+            {
+                Console.WriteLine(entity.Name + " | " + entity.PPG);
             }
         }
     }
